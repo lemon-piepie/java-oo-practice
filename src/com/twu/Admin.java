@@ -49,10 +49,12 @@ public class Admin {				//管理员可以查看热搜、添加热搜、添加超级热搜
 								
 				case 2:												//添加热搜
 					this.ht.addnormal();
+					this.ht.htsort(this.ht.hotlist);
 					this.cando();
 					break;										
 				case 3:												//添加超级热搜
 					this.ht.addsuper();
+					this.ht.htsort(this.ht.hotlist);
 					this.cando();
 					break;			
 				case 4:Main.main(null);break;						//退出

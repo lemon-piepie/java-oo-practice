@@ -34,14 +34,16 @@ public class User  {
 				break;	
 			case 2:												//给热搜事件投票
 				this.vote();
+				this.ht.htsort(this.ht.hotlist);
 				this.cando();
 				break;										
 			case 3:												//购买热搜
-				System.out.println("该功能正在开发中……");
+				this.ht.buyhot();
 				this.cando();
 				break;										
 			case 4:												//添加热搜
 				this.ht.addnormal();
+				this.ht.htsort(this.ht.hotlist);
 				this.cando();
 				break;			
 			case 5:Main.main(null);break;						//退出
